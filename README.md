@@ -19,25 +19,25 @@ This is a RESTful API built with Node.js, Express, and TypeScript to manage task
 - UUID (for unique task IDs)
 - Postman (for API testing)
 
-# Project Structure
+# 2. Project Structure
 
 todo-api/
 ├── src/
 │ ├── controllers/
-│ │ └── taskController.ts # Contains logic for CRUD, filters, pagination
+│ │ └── taskController.ts
 │ ├── models/
-│ │ └── taskModel.ts # Task interface and in-memory array
+│ │ └── taskModel.ts
 │ ├── routes/
-│ │ └── taskRoutes.ts # API routes for task endpoints
+│ │ └── taskRoutes.ts
 │ ├── utils/
-│ │ └── validators.ts # (Optional) Input validation functions
-│ └── index.ts # Entry point of the app
-├── package.json # Dependencies and scripts
-├── tsconfig.json # TypeScript configuration
-├── README.md # Project documentation
+│ │ └── validators.ts
+│ └── index.ts
+├── package.json
+├── tsconfig.json
+├── README.md
 
 
-## 2. Setup Instructions
+## 3. Setup Instructions
 
 ### Prerequisites
 
@@ -51,10 +51,13 @@ todo-api/
 git clone https://github.com/<your-username>/Task-Management-System-To-Do-app.git
 cd Task-Management-System-To-Do-app
 npm install
+npm run dev
 
+---
 
-### API Documentation
+API Documentation
 Base URL : http://localhost:3000/api
+
 1. Create a Task
 POST /tasks
 Body:
@@ -66,11 +69,11 @@ Body:
 
 2. Get All Tasks (with Filters & Pagination)
 GET /tasks
-Optional Query Parameters:
+Query Parameters:
 page: Page number (default: 1)
 limit: Tasks per page (default: 10)
-title: Filter by task title
-status: Filter by status (PENDING, COMPLETED, IN_PROGRESS)
+title: Filter by title substring
+status: PENDING, IN_PROGRESS, or COMPLETED
 
 Example:
 /api/tasks?title=buy&status=PENDING&page=1&limit=5
