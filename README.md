@@ -60,40 +60,44 @@ Base URL
 http://localhost:3000/api
 ```
 
-1. Create a Task
-POST /tasks
-Body:
+### 1. Create a Task
+**POST** '/tasks'
+**Body:**
+```json
 {
   "title": "Buy groceries",
   "description": "Milk, eggs, bread",
   "status": "PENDING"
 }
+```
 
-2. Get All Tasks (with Filters & Pagination)
-GET /tasks
-Query Parameters:
+### 2. Get All Tasks (with Filters & Pagination)
+**GET** '/tasks'
+**Query Parameters:**
 page: Page number (default: 1)
 limit: Tasks per page (default: 10)
 title: Filter by title substring
 status: PENDING, IN_PROGRESS, or COMPLETED
 
-Example:
+**Example:**
 ```bash
 /api/tasks?title=buy&status=PENDING&page=1&limit=5
 ```
 
-3. Get Task by ID
-GET /tasks/:id
+### 3. Get Task by ID
+**GET** '/tasks/:id'
 Returns the task if found, otherwise 404.
 
-4. Update Task
-PUT /tasks/:id
-Body:
+### 4. Update Task
+**PUT** '/tasks/:id'
+**Body:**
+```json
 {
   "title": "Buy fruits",
   "status": "IN_PROGRESS"
 }
+```
 
-5. Delete Task
-DELETE /tasks/:id
+### 5. Delete Task
+**DELETE** '/tasks/:id'
 Returns a message confirming deletion.
