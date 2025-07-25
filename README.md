@@ -19,7 +19,7 @@ This is a RESTful API built with Node.js, Express, and TypeScript to manage task
 - UUID (for unique task IDs)
 - Postman (for API testing)
 
-# 2. Project Structure
+# Project Structure
 
 todo-api/
 ├── src/
@@ -37,7 +37,7 @@ todo-api/
 ├── README.md
 
 
-## 3. Setup Instructions
+## 2. Setup Instructions
 
 ### Prerequisites
 
@@ -52,11 +52,13 @@ git clone https://github.com/<your-username>/Task-Management-System-To-Do-app.gi
 cd Task-Management-System-To-Do-app
 npm install
 npm run dev
+```
 
----
-
-API Documentation
-Base URL : http://localhost:3000/api
+## 3. API Documentation
+Base URL
+```bash
+http://localhost:3000/api
+```
 
 1. Create a Task
 POST /tasks
@@ -76,7 +78,9 @@ title: Filter by title substring
 status: PENDING, IN_PROGRESS, or COMPLETED
 
 Example:
+```bash
 /api/tasks?title=buy&status=PENDING&page=1&limit=5
+```
 
 3. Get Task by ID
 GET /tasks/:id
